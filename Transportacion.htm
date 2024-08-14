@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NOTAS</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
     <h1>Transportación de Notas</h1>
@@ -24,11 +25,78 @@
             <p>Notas de Saxofón</p>
             <div><textarea type="text" id="notaSaxofon" disabled ></textarea></div>
         </div>
-
-
-        
     </section>
 
+    <script>
+        function transponerNotas() {
+            var notasTrompeta = document.getElementById("notaTrompeta").value.split(" ");
+            var notasSaxofon = "";
+    
+            for (var i = 0; i < notasTrompeta.length; i++) {
+                switch (notasTrompeta[i]) {
+                    case "F":
+                        notasSaxofon += "C ";
+                        break;
+                    case "F#":
+                        notasSaxofon += "C# ";
+                        break;
+                        case "Gb":
+                        notasSaxofon += "C#";
+                        break;
+                    case "G":
+                        notasSaxofon += "D ";
+                        break;
+                    case "G#":
+                        notasSaxofon += "D# ";
+                        break;
+                        case "Ab":
+                        notasSaxofon += "D#";
+                        break;
+    
+                    case "A":
+                        notasSaxofon += "E ";
+                        break;
+                    case "A#":
+                        notasSaxofon += "F ";
+                        break;
+                        case "Bb":
+                        notasSaxofon += "F ";
+                        break;
+                    case "B":
+                        notasSaxofon += "F# ";
+                        break;
+                    case "C":
+                        notasSaxofon += "G ";
+                        break;
+                    case "C#":
+                        notasSaxofon += "G#";
+                        break;
+                    case "Db":
+                        notasSaxofon += "G#";
+                        break;
+    
+                    case "D":
+                        notasSaxofon += "A ";
+                        break;
+    
+                    case "D#":
+                        notasSaxofon += "A# ";
+                        break;
+                        case "Eb":
+                        notasSaxofon += "A#";
+                        break;
+                    case "E":
+                        notasSaxofon += "B ";
+                        break;
+                    default:
+                        notasSaxofon += notasTrompeta[i] + " ";
+                        break;
+                }
+            }
+
+            document.getElementById("notaSaxofon").value = notasSaxofon.trim();
+        }
+    </script>
     
 </body>
 </html>

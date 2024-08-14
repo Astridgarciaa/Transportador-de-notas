@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2e9f4;
+}
+
+h1 {
+    font-style: italic;
+    color: #663399;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #9a4cce;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.header, .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 64px;
+    justify-items: center;
+}
+.header div textarea, .content div textarea{
+    width: 800px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background: rgba(256, 256, 256, 0.5);
+    height: 48px;
+    padding: 12px 28px;
+}
+textarea:focus{
+    border: 1px solid white;
+}
