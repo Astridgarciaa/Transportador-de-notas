@@ -1,16 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2e9f4;
+    font-family: "Be Vietnam Pro", sans-serif;
+    background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
-    font-style: italic;
-    color: #663399;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
+    font-weight: 900;
 }
 .info-text p {
+    color: #ffffff;
     padding: 20px;
     text-align: center; 
     text-justify: inter-word; 
@@ -23,7 +27,7 @@ table {
     max-width: 800px;
     margin: 0 auto;
     border-collapse: collapse;
-    background-color: #9a4cce;
+    background-color: #ffffff;
 }
 
 th, td {
@@ -42,19 +46,45 @@ input[type="text"] {
     flex-direction: column;
 }
 .header, .content{
+    color: #e5e0eb;
     display: grid;
     grid-template-columns: 1fr;
     padding: 0 64px;
     justify-items: center;
 }
-.header div textarea, .content div textarea{
+
+.header div textarea {
     width: 800px;
-    border-radius: 25px;
+    max-width: 800px;
+    min-width: 800px;
+    border-radius: 12px;
     border: 1px solid white;
-    background: rgba(256, 256, 256, 0.5);
+    background: rgba(256, 256, 256, 1);
     height: 48px;
+    min-height: 48px;
     padding: 12px 28px;
 }
+
+.header div textarea:focus{
+    outline: none;
+}
+
+
+.content div textarea{
+    width: 800px;
+    max-width: 800px;
+    min-width: 800px;
+    border-radius: 12px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 1);
+    height: 48px;
+    min-height: 48px;
+    padding: 12px 28px;
+}
+
 textarea:focus{
     border: 1px solid white;
 }
+
+
+

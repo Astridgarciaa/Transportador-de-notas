@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOTAS</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Transportación de Notas</h1>
+    <h1>Transportación De Notas</h1>
     <div class="info-text">
-        <p> Para asegurar el correcto funcionamiento de nuestra plataforma, es fundamental 
+        <p> Para asegurar el correcto funcionamiento de nuestra plataforma, es fundamental
             que ingrese las notas utilizando el cifrado americano en letras mayúsculas. <br>
             Cada nota debe ser introducida con un espacio separado, ya que esto permite
-            que nuestro sistema identifique y procese cada nota de manera adecuada.  </p> 
+            que nuestro sistema identifique y procese cada nota de manera adecuada. </p>
     </div>
     <section class="main">
         <div class="header">
-            <p>Notas de Trompeta</p>
-            <div><textarea type="text" id="notaTrompeta" oninput="transponerNotas()" ></textarea></div>
+            <p>Notas De Trompeta</p>
+            <div><textarea type="text" id="notaTrompeta" oninput="transponerNotas()"></textarea></div>
         </div>
         <div class="content">
-    
-            <p>Notas de Saxofón</p>
-            <div><textarea type="text" id="notaSaxofon" disabled ></textarea></div>
+            <p>Notas De Saxofón</p>
+            <div> <textarea type="text" id="notaSaxofon" disabled></textarea></div>
         </div>
     </section>
-
     <script>
         function transponerNotas() {
             var notasTrompeta = document.getElementById("notaTrompeta").value.split(" ");
             var notasSaxofon = "";
-    
+
             for (var i = 0; i < notasTrompeta.length; i++) {
                 switch (notasTrompeta[i]) {
                     case "F":
@@ -39,7 +42,7 @@
                     case "F#":
                         notasSaxofon += "C# ";
                         break;
-                        case "Gb":
+                    case "Gb":
                         notasSaxofon += "C#";
                         break;
                     case "G":
@@ -48,17 +51,17 @@
                     case "G#":
                         notasSaxofon += "D# ";
                         break;
-                        case "Ab":
+                    case "Ab":
                         notasSaxofon += "D#";
                         break;
-    
+
                     case "A":
                         notasSaxofon += "E ";
                         break;
                     case "A#":
                         notasSaxofon += "F ";
                         break;
-                        case "Bb":
+                    case "Bb":
                         notasSaxofon += "F ";
                         break;
                     case "B":
@@ -73,15 +76,15 @@
                     case "Db":
                         notasSaxofon += "G#";
                         break;
-    
+
                     case "D":
                         notasSaxofon += "A ";
                         break;
-    
+
                     case "D#":
                         notasSaxofon += "A# ";
                         break;
-                        case "Eb":
+                    case "Eb":
                         notasSaxofon += "A#";
                         break;
                     case "E":
@@ -96,6 +99,7 @@
             document.getElementById("notaSaxofon").value = notasSaxofon.trim();
         }
     </script>
-    
+
 </body>
+
 </html>
